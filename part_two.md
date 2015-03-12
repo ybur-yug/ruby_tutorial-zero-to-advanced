@@ -8,7 +8,8 @@ mv sinatra-boilerplate app
 cd app
 bundle
 ls
-#=> app  app.rb  assets.rbconfig.ru  controller.rb  Gemfile  Gemfile.lock  helpers.rb  LICENSE
+#=> 
+app  app.rb  assets.rbconfig.ru  controller.rb  Gemfile  Gemfile.lock  helpers.rb  LICENSE
 model.rb  public  README.md  views
 ```
 
