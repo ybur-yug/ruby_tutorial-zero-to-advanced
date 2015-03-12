@@ -52,6 +52,13 @@ RUN wget https://tesseract-ocr.googlecode.com/files/tesseract-ocr-3.02.eng.tar.g
 RUN tar -xf tesseract-ocr-3.02.eng.tar.gz
 RUN sudo cp -r tesseract-ocr/tessdata /usr/local/share/
 
+# Install the gem
+RUN git clone http://www.github.com/meh/ruby-tesseract-ocr.git
+RUN cd ruby-tesseract-ocr
+RUN gem build tesseract-ocr.gemspec
+RUN gem install tesseract-ocr-0.1.6.gem
+RUN cd ..
+
 # update working directories
 ADD ./ruby_server /ruby_server
 WORKDIR /ruby_server
