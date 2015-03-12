@@ -12,6 +12,27 @@ ls
 model.rb  public  README.md  views
 ```
 
+Since we have some cool ass OCR software, we ought to try it out. The repository for this Ruby 
+wrapper of tesseract comes with an executable. 
+
+`cd ~/ruby-tesseract-ocr/lib/`
+
+With the provided test image in the repository, we can run it on it like so:
+
+`tesseract.rb ~/ruby_ocr_tutorial/test/rb.png`
+
+and we get the output
+
+```
+bobby@devbox:~/ruby_ocr_tutorial/ruby-tesseract-ocr/lib$ tesseract.rb ~/ruby_ocr_tutorial/test/rb.png 
+RUST
+BELT
+AM ERICANA
+```
+
+Outside of a stray space, it appears we are in business.
+
+## Getting Images to Parse
 Now that we have some defaults set and a basis for an application, lets fire up the server quickly.
 
 `bundle exec ruby app.rb`
