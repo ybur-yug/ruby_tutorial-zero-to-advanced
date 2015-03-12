@@ -13,6 +13,7 @@ app  app.rb  assets.rbconfig.ru  controller.rb  Gemfile  Gemfile.lock  helpers.r
 model.rb  public  README.md  views
 ```
 
+## Testing OCR
 Since we have some cool ass OCR software, we ought to try it out. The repository for this Ruby 
 wrapper of tesseract comes with an executable. 
 
