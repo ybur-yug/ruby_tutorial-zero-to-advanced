@@ -25,6 +25,8 @@ With the provided test image in the repository, we can run it on it like so:
 
 and we get the output
 
+![img](/test/rb.png)
+
 ```
 bobby@devbox:~/ruby_ocr_tutorial/ruby-tesseract-ocr/lib$ tesseract.rb ~/ruby_ocr_tutorial/test/rb.png 
 RUST
