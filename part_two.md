@@ -1,10 +1,8 @@
 ## Building A Skeleton
 There is a wonderful boierlplate Sintra repository by [karlcoelho](https://github.com/karlcoelho/sinatra-boilerplate) we are going to utilize
-for a quick start.
+for a quick start. It is provided in the repository under the `app` directory.
 
 ```BASH
-git clone https://github.com/karlcoelho/sinatra-boilerplate
-mv sinatra-boilerplate app
 cd app
 bundle
 ls
@@ -80,10 +78,4 @@ the test directory of the project. The stack trace is in `.stack_trace`. A simil
 
 Anywho, if someone figures that out I'd love to learn what broke.
 
-## Back to Building Shit That Works 
-
-# Upcoming
-
-## Using the CLI via Ruby
-## Optimizing Parsing By Row
-## Utilizing Confidence
+#### [Part 3](/part_three.md)
