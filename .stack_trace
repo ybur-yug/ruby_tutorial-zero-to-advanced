@@ -1,0 +1,341 @@
+bobby@devbox:~/ruby_ocr_tutorial/ruby-tesseract-ocr/lib$ tesseract.rb ../../test/prince.png > .stack_trace 
+index >= 0 && index < size_used_:Error:Assert failed:in file ../ccutil/genericvector.h, line 512
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/api.rb:157: [BUG] Segmentation fault at 0x00000000000000
+ruby 2.1.0p0 (2013-12-25 revision 44422) [x86_64-linux]
+
+-- Control frame information -----------------------------------------------
+c:0011 p:---- s:0043 e:000042 CFUNC  :get_utf8_text
+c:0010 p:---- s:0041 e:000040 IFUNC 
+c:0009 p:0018 s:0039 e:000038 METHOD /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/api.rb:157
+c:0008 p:0040 s:0034 e:000033 METHOD /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine.rb:151
+c:0007 p:0032 s:0026 e:000025 LAMBDA /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/call-me-0.0.2.3/lib/call-me/named.rb:207 [FINISH]
+c:0006 p:0176 s:0021 e:000019 BLOCK  /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/bin/tesseract.rb:77 [FINISH]
+c:0005 p:---- s:0016 e:000015 CFUNC  :tap
+c:0004 p:0069 s:0013 E:001770 TOP    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/bin/tesseract.rb:63 [FINISH]
+c:0003 p:---- s:0010 e:000009 CFUNC  :load
+c:0002 p:0119 s:0006 E:0023d8 EVAL   /home/bobby/.rbenv/versions/2.1.0/bin/tesseract.rb:23 [FINISH]
+c:0001 p:0000 s:0002 E:0004b8 TOP    [FINISH]
+
+-- Ruby level backtrace information ----------------------------------------
+/home/bobby/.rbenv/versions/2.1.0/bin/tesseract.rb:23:in `<main>'
+/home/bobby/.rbenv/versions/2.1.0/bin/tesseract.rb:23:in `load'
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/bin/tesseract.rb:63:in `<top (required)>'
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/bin/tesseract.rb:63:in `tap'
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/bin/tesseract.rb:77:in `block in <top (required)>'
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/call-me-0.0.2.3/lib/call-me/named.rb:207:in `block in named'
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine.rb:151:in `text_for'
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/api.rb:157:in `get_text'
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/api.rb:157:in `get_utf8_text'
+
+-- C level backtrace information -------------------------------------------
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x18726c) [0x7fcbdc49626c]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x1f8e23) [0x7fcbdc507e23]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(rb_bug+0xb3) [0x7fcbdc509003]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0xfc40e) [0x7fcbdc40b40e]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0xfc90) [0x7fcbdbedbc90] /home/bobby/.rbenv/versions/2.1.0/include/ruby-2.1.0/ruby/ruby.h:598
+/usr/local/lib/libtesseract.so.3(_ZNK7ERRCODE5errorEPKc16TessErrorLogCodeS1_z+0x15c) [0x7fcbd9320a2c] errcode.cpp:79
+/usr/local/lib/libtesseract.so.3(+0x1b77f2) [0x7fcbd928c7f2] ../ccutil/genericvector.h:512
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract13LanguageModel19FillConsistencyInfoEibP11BLOB_CHOICEPNS_17ViterbiStateEntryES2_P13CHUNKS_RECORDPNS_28LanguageModelConsistencyInfoE+0x8e8) [0x7fcbd928ed08] ../ccutil/unicity_table.h:133
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract13LanguageModel20AddViterbiStateEntryEhfbiiP11BLOB_CHOICES2_PNS_17ViterbiStateEntryEP4HEAPPPNS_16BestPathByColumnEP13CHUNKS_RECORDPNS_16BestChoiceBundleEP12BlamerBundle+0x526) [0x7fcbd9297686] language_model.cpp:506
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract13LanguageModel11UpdateStateEhiiP16BLOB_CHOICE_LISTS2_P4HEAPPPNS_16BestPathByColumnEP13CHUNKS_RECORDPNS_16BestChoiceBundleEP12BlamerBundle+0x4cf) [0x7fcbd92989df]
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract7Wordrec20UpdateSegSearchNodesEiPP23SEG_SEARCH_PENDING_LISTPPNS_16BestPathByColumnEP13CHUNKS_RECORDP4HEAPPNS_16BestChoiceBundleEP12BlamerBundle+0x29f) [0x7fcbd929c4ff] segsearch.cpp:215
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract7Wordrec9SegSearchEP13CHUNKS_RECORDP11WERD_CHOICEP13GenericVectorIP16BLOB_CHOICE_LISTES4_P5STATEP12BlamerBundle+0x31f) [0x7fcbd929e1ef] segsearch.cpp:114
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract7Wordrec15word_associatorEbP8WERD_RESP5STATEP13GenericVectorIP16BLOB_CHOICE_LISTEPS5_I12DANGERR_INFOES4_+0x16b) [0x7fcbd92881ab] chopper.cpp:1030
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract7Wordrec14chop_word_mainEP8WERD_RES+0x2bc) [0x7fcbd928961c] chopper.cpp:646
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract7Wordrec8cc_recogEP8WERD_RES+0x47) [0x7fcbd929e747] tface.cpp:121
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract9Tesseract20recog_word_recursiveEP8WERD_RESP22BLOB_CHOICE_LIST_CLIST+0x47) [0x7fcbd91dd9a7] tfacepp.cpp:116
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract9Tesseract10recog_wordEP8WERD_RESP22BLOB_CHOICE_LIST_CLIST+0x39) [0x7fcbd91de299] tfacepp.cpp:57
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract9Tesseract18tess_segment_pass1EP8WERD_RESP22BLOB_CHOICE_LIST_CLIST+0x59) [0x7fcbd91d0e39] tessbox.cpp:56
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract9Tesseract19classify_word_pass1EP5BLOCKP3ROWP8WERD_RES+0xfe) [0x7fcbd919712e] control.cpp:878
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract9Tesseract26classify_word_and_languageEMS0_FvP5BLOCKP3ROWP8WERD_RESES2_S4_S6_+0x8d) [0x7fcbd91998ad] control.cpp:813
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract9Tesseract15recog_all_wordsEP8PAGE_RESP10ETEXT_DESCPK4TBOXPKci+0x702) [0x7fcbd919a312] control.cpp:261
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract11TessBaseAPI9RecognizeEP10ETEXT_DESC+0x284) [0x7fcbd918be64] baseapi.cpp:747
+/usr/local/lib/libtesseract.so.3(_ZN9tesseract11TessBaseAPI11GetUTF8TextEv+0xed) [0x7fcbd918c04d] baseapi.cpp:1019
+/tmp/.ffi-inline-1000/6a855e1f1497b076e38c3a3ee5fc3ca2d3ebbd69.so(get_utf8_text+0x18) [0x7fcbd765dead]
+/usr/lib/x86_64-linux-gnu/libffi.so.6(ffi_call_unix64+0x4c) [0x7fcbda2adafe] /usr/include/x86_64-linux-gnu/bits/string3.h:84
+/usr/lib/x86_64-linux-gnu/libffi.so.6(ffi_call+0x308) [0x7fcbda2ad568] ../sysdeps/x86_64/crtn.S:41
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so(+0x11a44) [0x7fcbda4c1a44] Call.c:294
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x195282) [0x7fcbdc4a4282]
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so(+0x11a7e) [0x7fcbda4c1a7e] Call.c:303
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(rb_rescue2+0x10e) [0x7fcbdc33586e]
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so(rbffi_CallFunction+0x23a) [0x7fcbda4c25aa] Call.c:357
+/home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so(+0x19d86) [0x7fcbda4c9d86] MethodHandle.c:232
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x179faf) [0x7fcbdc488faf]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17b1e7) [0x7fcbdc48a1e7]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(rb_method_call_with_block+0x10a) [0x7fcbdc33ac5a]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x2bdb9) [0x7fcbdc33adb9]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17c6f7) [0x7fcbdc48b6f7]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17c84f) [0x7fcbdc48b84f]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17c9f5) [0x7fcbdc48b9f5]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17e3ae) [0x7fcbdc48d3ae]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x175695) [0x7fcbdc484695]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17902c) [0x7fcbdc48802c]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17c84f) [0x7fcbdc48b84f]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17c9f5) [0x7fcbdc48b9f5]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17e3ae) [0x7fcbdc48d3ae]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x175695) [0x7fcbdc484695]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17902c) [0x7fcbdc48802c]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(rb_yield+0x26f) [0x7fcbdc492e2f]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x80259) [0x7fcbdc38f259]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x170cb4) [0x7fcbdc47fcb4]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17e30e) [0x7fcbdc48d30e]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x176026) [0x7fcbdc485026]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17902c) [0x7fcbdc48802c]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(rb_iseq_eval+0x1a9) [0x7fcbdc493d99]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x1ff830) [0x7fcbdc50e830]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x1ffe82) [0x7fcbdc50ee82]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x170cb4) [0x7fcbdc47fcb4]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17e30e) [0x7fcbdc48d30e]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x175695) [0x7fcbdc484695]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x17902c) [0x7fcbdc48802c]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(rb_iseq_eval_main+0x1f6) [0x7fcbdc494006]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x22baa) [0x7fcbdc331baa]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(ruby_run_node+0x2d) [0x7fcbdc3350ad]
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x227bb) [0x7fcbdc3317bb]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7fcbdb3e6ec5] vm_insnhelper.c:133
+/home/bobby/.rbenv/versions/2.1.0/bin/ruby(+0x227e9) [0x7fcbdc3317e9]
+
+-- Other runtime information -----------------------------------------------
+
+* Loaded script: /home/bobby/.rbenv/versions/2.1.0/bin/tesseract.rb
+
+* Loaded features:
+
+    0 enumerator.so
+    1 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/encdb.so
+    2 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/trans/transdb.so
+    3 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/rbconfig.rb
+    4 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/compatibility.rb
+    5 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/defaults.rb
+    6 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/deprecate.rb
+    7 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/errors.rb
+    8 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/version.rb
+    9 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/requirement.rb
+   10 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/platform.rb
+   11 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/basic_specification.rb
+   12 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/stub_specification.rb
+   13 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/util/stringio.rb
+   14 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/specification.rb
+   15 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/exceptions.rb
+   16 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/core_ext/kernel_gem.rb
+   17 thread.rb
+   18 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/thread.so
+   19 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/monitor.rb
+   20 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb
+   21 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems.rb
+   22 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/dependency.rb
+   23 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/rubygems/path_support.rb
+   24 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/optparse.rb
+   25 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/refining-0.0.5.5/lib/refining.rb
+   26 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/call-me-0.0.2.3/lib/call-me/named.rb
+   27 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/call-me-0.0.2.3/lib/call-me/memoize.rb
+   28 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/iso-639-0.2.5/lib/iso-639.rb
+   29 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/extensions.rb
+   30 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so
+   31 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/platform.rb
+   32 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/types.rb
+   33 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/library.rb
+   34 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/errno.rb
+   35 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/pointer.rb
+   36 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/memorypointer.rb
+   37 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/struct_layout_builder.rb
+   38 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/struct.rb
+   39 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/union.rb
+   40 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/managedstruct.rb
+   41 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/callback.rb
+   42 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/io.rb
+   43 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/autopointer.rb
+   44 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/variadic.rb
+   45 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/enum.rb
+   46 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi/ffi.rb
+   47 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-1.9.6/lib/ffi.rb
+   48 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-extra-0.1.0/lib/ffi/extra.rb
+   49 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest.so
+   50 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/digest.rb
+   51 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest/sha1.so
+   52 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/etc.so
+   53 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/fileutils.rb
+   54 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/shellwords.rb
+   55 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/error.rb
+   56 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/compilers.rb
+   57 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/compilers/tcc.rb
+   58 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/compilers/gcc.rb
+   59 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/builders/c.rb
+   60 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/compilers/gxx.rb
+   61 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/builders/cpp.rb
+   62 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/builders.rb
+   63 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline/inline.rb
+   64 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/ffi-inline-0.0.4.3/lib/ffi/inline.rb
+   65 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/tmpdir.rb
+   66 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/c/leptonica.rb
+   67 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/c/baseapi.rb
+   68 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/c/iterator.rb
+   69 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/c.rb
+   70 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/api/image.rb
+   71 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/api/iterator.rb
+   72 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/api.rb
+   73 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine/bounding_box.rb
+   74 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine/baseline.rb
+   75 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine/orientation.rb
+   76 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine/font_attributes.rb
+   77 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine/iterator.rb
+   78 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract/engine.rb
+   79 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract-ocr.rb
+   80 /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/tesseract-ocr-0.1.6/lib/tesseract.rb
+
+* Process memory map:
+
+7fcbd7153000-7fcbd7257000 rw-p 00000000 00:00 0 
+7fcbd7257000-7fcbd7259000 r-xp 00000000 fc:00 12190695                   /tmp/.ffi-inline-1000/3885a5bf7690d0ce91f3abd07719d479e16bb146.so
+7fcbd7259000-7fcbd7458000 ---p 00002000 fc:00 12190695                   /tmp/.ffi-inline-1000/3885a5bf7690d0ce91f3abd07719d479e16bb146.so
+7fcbd7458000-7fcbd7459000 r--p 00001000 fc:00 12190695                   /tmp/.ffi-inline-1000/3885a5bf7690d0ce91f3abd07719d479e16bb146.so
+7fcbd7459000-7fcbd745a000 rw-p 00002000 fc:00 12190695                   /tmp/.ffi-inline-1000/3885a5bf7690d0ce91f3abd07719d479e16bb146.so
+7fcbd745a000-7fcbd745b000 r-xp 00000000 fc:00 12190692                   /tmp/.ffi-inline-1000/ff5468a9d69d3651c0c173fe61b90795b31f383b.so
+7fcbd745b000-7fcbd765a000 ---p 00001000 fc:00 12190692                   /tmp/.ffi-inline-1000/ff5468a9d69d3651c0c173fe61b90795b31f383b.so
+7fcbd765a000-7fcbd765b000 r--p 00000000 fc:00 12190692                   /tmp/.ffi-inline-1000/ff5468a9d69d3651c0c173fe61b90795b31f383b.so
+7fcbd765b000-7fcbd765c000 rw-p 00001000 fc:00 12190692                   /tmp/.ffi-inline-1000/ff5468a9d69d3651c0c173fe61b90795b31f383b.so
+7fcbd765c000-7fcbd765f000 r-xp 00000000 fc:00 12190684                   /tmp/.ffi-inline-1000/6a855e1f1497b076e38c3a3ee5fc3ca2d3ebbd69.so
+7fcbd765f000-7fcbd785e000 ---p 00003000 fc:00 12190684                   /tmp/.ffi-inline-1000/6a855e1f1497b076e38c3a3ee5fc3ca2d3ebbd69.so
+7fcbd785e000-7fcbd785f000 r--p 00002000 fc:00 12190684                   /tmp/.ffi-inline-1000/6a855e1f1497b076e38c3a3ee5fc3ca2d3ebbd69.so
+7fcbd785f000-7fcbd7860000 rw-p 00003000 fc:00 12190684                   /tmp/.ffi-inline-1000/6a855e1f1497b076e38c3a3ee5fc3ca2d3ebbd69.so
+7fcbd7860000-7fcbd7861000 r-xp 00000000 fc:00 12190681                   /tmp/.ffi-inline-1000/2c218a90bd56a37df9ae96f202e2c662dc0bd3ae.so
+7fcbd7861000-7fcbd7a60000 ---p 00001000 fc:00 12190681                   /tmp/.ffi-inline-1000/2c218a90bd56a37df9ae96f202e2c662dc0bd3ae.so
+7fcbd7a60000-7fcbd7a61000 r--p 00000000 fc:00 12190681                   /tmp/.ffi-inline-1000/2c218a90bd56a37df9ae96f202e2c662dc0bd3ae.so
+7fcbd7a61000-7fcbd7a62000 rw-p 00001000 fc:00 12190681                   /tmp/.ffi-inline-1000/2c218a90bd56a37df9ae96f202e2c662dc0bd3ae.so
+7fcbd7a62000-7fcbd7a6d000 r-xp 00000000 fc:00 400107                     /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7fcbd7a6d000-7fcbd7c6c000 ---p 0000b000 fc:00 400107                     /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7fcbd7c6c000-7fcbd7c6d000 r--p 0000a000 fc:00 400107                     /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7fcbd7c6d000-7fcbd7c70000 rw-p 0000b000 fc:00 400107                     /usr/lib/x86_64-linux-gnu/libjbig.so.0
+7fcbd7c70000-7fcbd7c91000 r-xp 00000000 fc:00 28839864                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fcbd7c91000-7fcbd7e90000 ---p 00021000 fc:00 28839864                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fcbd7e90000-7fcbd7e91000 r--p 00020000 fc:00 28839864                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fcbd7e91000-7fcbd7e92000 rw-p 00021000 fc:00 28839864                   /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7fcbd7e92000-7fcbd7f01000 r-xp 00000000 fc:00 400108                     /usr/lib/x86_64-linux-gnu/libtiff.so.5.2.0
+7fcbd7f01000-7fcbd8101000 ---p 0006f000 fc:00 400108                     /usr/lib/x86_64-linux-gnu/libtiff.so.5.2.0
+7fcbd8101000-7fcbd8102000 r--p 0006f000 fc:00 400108                     /usr/lib/x86_64-linux-gnu/libtiff.so.5.2.0
+7fcbd8102000-7fcbd8105000 rw-p 00070000 fc:00 400108                     /usr/lib/x86_64-linux-gnu/libtiff.so.5.2.0
+7fcbd8105000-7fcbd8148000 r-xp 00000000 fc:00 401535                     /usr/lib/x86_64-linux-gnu/libjpeg.so.8.0.2
+7fcbd8148000-7fcbd8348000 ---p 00043000 fc:00 401535                     /usr/lib/x86_64-linux-gnu/libjpeg.so.8.0.2
+7fcbd8348000-7fcbd8349000 r--p 00043000 fc:00 401535                     /usr/lib/x86_64-linux-gnu/libjpeg.so.8.0.2
+7fcbd8349000-7fcbd834a000 rw-p 00044000 fc:00 401535                     /usr/lib/x86_64-linux-gnu/libjpeg.so.8.0.2
+7fcbd834a000-7fcbd835a000 rw-p 00000000 00:00 0 
+7fcbd835a000-7fcbd837f000 r-xp 00000000 fc:00 28839916                   /lib/x86_64-linux-gnu/libpng12.so.0.51.0
+7fcbd837f000-7fcbd857e000 ---p 00025000 fc:00 28839916                   /lib/x86_64-linux-gnu/libpng12.so.0.51.0
+7fcbd857e000-7fcbd857f000 r--p 00024000 fc:00 28839916                   /lib/x86_64-linux-gnu/libpng12.so.0.51.0
+7fcbd857f000-7fcbd8580000 rw-p 00025000 fc:00 28839916                   /lib/x86_64-linux-gnu/libpng12.so.0.51.0
+7fcbd8580000-7fcbd8598000 r-xp 00000000 fc:00 28839980                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fcbd8598000-7fcbd8797000 ---p 00018000 fc:00 28839980                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fcbd8797000-7fcbd8798000 r--p 00017000 fc:00 28839980                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fcbd8798000-7fcbd8799000 rw-p 00018000 fc:00 28839980                   /lib/x86_64-linux-gnu/libz.so.1.2.8
+7fcbd8799000-7fcbd89a5000 r-xp 00000000 fc:00 791895                     /usr/local/lib/liblept.so.4.0.1
+7fcbd89a5000-7fcbd8ba5000 ---p 0020c000 fc:00 791895                     /usr/local/lib/liblept.so.4.0.1
+7fcbd8ba5000-7fcbd8ba6000 r--p 0020c000 fc:00 791895                     /usr/local/lib/liblept.so.4.0.1
+7fcbd8ba6000-7fcbd8baf000 rw-p 0020d000 fc:00 791895                     /usr/local/lib/liblept.so.4.0.1
+7fcbd8baf000-7fcbd8bc5000 r-xp 00000000 fc:00 28839945                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fcbd8bc5000-7fcbd8dc4000 ---p 00016000 fc:00 28839945                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fcbd8dc4000-7fcbd8dc5000 r--p 00015000 fc:00 28839945                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fcbd8dc5000-7fcbd8dc6000 rw-p 00016000 fc:00 28839945                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fcbd8dc6000-7fcbd8eb6000 r-xp 00000000 fc:00 397626                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7fcbd8eb6000-7fcbd90b6000 ---p 000f0000 fc:00 397626                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7fcbd90b6000-7fcbd90be000 r--p 000f0000 fc:00 397626                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7fcbd90be000-7fcbd90c0000 rw-p 000f8000 fc:00 397626                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7fcbd90c0000-7fcbd90d5000 rw-p 00000000 00:00 0 
+7fcbd90d5000-7fcbd93a0000 r-xp 00000000 fc:00 792424                     /usr/local/lib/libtesseract.so.3.0.2
+7fcbd93a0000-7fcbd95a0000 ---p 002cb000 fc:00 792424                     /usr/local/lib/libtesseract.so.3.0.2
+7fcbd95a0000-7fcbd95a7000 r--p 002cb000 fc:00 792424                     /usr/local/lib/libtesseract.so.3.0.2
+7fcbd95a7000-7fcbd95ae000 rw-p 002d2000 fc:00 792424                     /usr/local/lib/libtesseract.so.3.0.2
+7fcbd95ae000-7fcbd96b8000 rw-p 00000000 00:00 0 
+7fcbd96b8000-7fcbd96b9000 r-xp 00000000 fc:00 12190678                   /tmp/.ffi-inline-1000/6246d134e034978f3edc2251fc2660d216bb5ac9.so
+7fcbd96b9000-7fcbd98b8000 ---p 00001000 fc:00 12190678                   /tmp/.ffi-inline-1000/6246d134e034978f3edc2251fc2660d216bb5ac9.so
+7fcbd98b8000-7fcbd98b9000 r--p 00000000 fc:00 12190678                   /tmp/.ffi-inline-1000/6246d134e034978f3edc2251fc2660d216bb5ac9.so
+7fcbd98b9000-7fcbd98ba000 rw-p 00001000 fc:00 12190678                   /tmp/.ffi-inline-1000/6246d134e034978f3edc2251fc2660d216bb5ac9.so
+7fcbd98ba000-7fcbd98bd000 r-xp 00000000 fc:00 6032051                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/etc.so
+7fcbd98bd000-7fcbd9abc000 ---p 00003000 fc:00 6032051                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/etc.so
+7fcbd9abc000-7fcbd9abd000 r--p 00002000 fc:00 6032051                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/etc.so
+7fcbd9abd000-7fcbd9abe000 rw-p 00003000 fc:00 6032051                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/etc.so
+7fcbd9abe000-7fcbd9ac1000 r-xp 00000000 fc:00 6032057                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest.so
+7fcbd9ac1000-7fcbd9cc1000 ---p 00003000 fc:00 6032057                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest.so
+7fcbd9cc1000-7fcbd9cc2000 r--p 00003000 fc:00 6032057                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest.so
+7fcbd9cc2000-7fcbd9cc3000 rw-p 00004000 fc:00 6032057                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest.so
+7fcbd9cc3000-7fcbd9e7a000 r-xp 00000000 fc:00 28839960                   /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fcbd9e7a000-7fcbda079000 ---p 001b7000 fc:00 28839960                   /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fcbda079000-7fcbda096000 r--p 001b6000 fc:00 28839960                   /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fcbda096000-7fcbda0a2000 rw-p 001d3000 fc:00 28839960                   /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7fcbda0a2000-7fcbda0a6000 rw-p 00000000 00:00 0 
+7fcbda0a6000-7fcbda0a7000 r-xp 00000000 fc:00 6032063                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest/sha1.so
+7fcbda0a7000-7fcbda2a6000 ---p 00001000 fc:00 6032063                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest/sha1.so
+7fcbda2a6000-7fcbda2a7000 r--p 00000000 fc:00 6032063                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest/sha1.so
+7fcbda2a7000-7fcbda2a8000 rw-p 00001000 fc:00 6032063                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/digest/sha1.so
+7fcbda2a8000-7fcbda2af000 r-xp 00000000 fc:00 395456                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7fcbda2af000-7fcbda4ae000 ---p 00007000 fc:00 395456                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7fcbda4ae000-7fcbda4af000 r--p 00006000 fc:00 395456                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7fcbda4af000-7fcbda4b0000 rw-p 00007000 fc:00 395456                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7fcbda4b0000-7fcbda4d2000 r-xp 00000000 fc:00 10880954                   /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so
+7fcbda4d2000-7fcbda6d1000 ---p 00022000 fc:00 10880954                   /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so
+7fcbda6d1000-7fcbda6d2000 r--p 00021000 fc:00 10880954                   /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so
+7fcbda6d2000-7fcbda6d3000 rw-p 00022000 fc:00 10880954                   /home/bobby/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0-static/ffi-1.9.6/ffi_c.so
+7fcbda6d3000-7fcbda6d4000 rw-p 00000000 00:00 0 
+7fcbda6d4000-7fcbda6d7000 r-xp 00000000 fc:00 6032080                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/thread.so
+7fcbda6d7000-7fcbda8d6000 ---p 00003000 fc:00 6032080                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/thread.so
+7fcbda8d6000-7fcbda8d7000 r--p 00002000 fc:00 6032080                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/thread.so
+7fcbda8d7000-7fcbda8d8000 rw-p 00003000 fc:00 6032080                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/thread.so
+7fcbda8d8000-7fcbda8da000 r-xp 00000000 fc:00 6032035                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/trans/transdb.so
+7fcbda8da000-7fcbdaada000 ---p 00002000 fc:00 6032035                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/trans/transdb.so
+7fcbdaada000-7fcbdaadb000 r--p 00002000 fc:00 6032035                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/trans/transdb.so
+7fcbdaadb000-7fcbdaadc000 rw-p 00003000 fc:00 6032035                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/trans/transdb.so
+7fcbdaadc000-7fcbdaade000 r-xp 00000000 fc:00 6031997                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/encdb.so
+7fcbdaade000-7fcbdacdd000 ---p 00002000 fc:00 6031997                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/encdb.so
+7fcbdacdd000-7fcbdacde000 r--p 00001000 fc:00 6031997                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/encdb.so
+7fcbdacde000-7fcbdacdf000 rw-p 00002000 fc:00 6031997                    /home/bobby/.rbenv/versions/2.1.0/lib/ruby/2.1.0/x86_64-linux/enc/encdb.so
+7fcbdacdf000-7fcbdb3c5000 r--p 00000000 fc:00 400022                     /usr/lib/locale/locale-archive
+7fcbdb3c5000-7fcbdb57f000 r-xp 00000000 fc:00 28839937                   /lib/x86_64-linux-gnu/libc-2.19.so
+7fcbdb57f000-7fcbdb77e000 ---p 001ba000 fc:00 28839937                   /lib/x86_64-linux-gnu/libc-2.19.so
+7fcbdb77e000-7fcbdb782000 r--p 001b9000 fc:00 28839937                   /lib/x86_64-linux-gnu/libc-2.19.so
+7fcbdb782000-7fcbdb784000 rw-p 001bd000 fc:00 28839937                   /lib/x86_64-linux-gnu/libc-2.19.so
+7fcbdb784000-7fcbdb789000 rw-p 00000000 00:00 0 
+7fcbdb789000-7fcbdb88e000 r-xp 00000000 fc:00 28839754                   /lib/x86_64-linux-gnu/libm-2.19.so
+7fcbdb88e000-7fcbdba8d000 ---p 00105000 fc:00 28839754                   /lib/x86_64-linux-gnu/libm-2.19.so
+7fcbdba8d000-7fcbdba8e000 r--p 00104000 fc:00 28839754                   /lib/x86_64-linux-gnu/libm-2.19.so
+7fcbdba8e000-7fcbdba8f000 rw-p 00105000 fc:00 28839754                   /lib/x86_64-linux-gnu/libm-2.19.so
+7fcbdba8f000-7fcbdba98000 r-xp 00000000 fc:00 28839893                   /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fcbdba98000-7fcbdbc98000 ---p 00009000 fc:00 28839893                   /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fcbdbc98000-7fcbdbc99000 r--p 00009000 fc:00 28839893                   /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fcbdbc99000-7fcbdbc9a000 rw-p 0000a000 fc:00 28839893                   /lib/x86_64-linux-gnu/libcrypt-2.19.so
+7fcbdbc9a000-7fcbdbcc8000 rw-p 00000000 00:00 0 
+7fcbdbcc8000-7fcbdbccb000 r-xp 00000000 fc:00 28839889                   /lib/x86_64-linux-gnu/libdl-2.19.so
+7fcbdbccb000-7fcbdbeca000 ---p 00003000 fc:00 28839889                   /lib/x86_64-linux-gnu/libdl-2.19.so
+7fcbdbeca000-7fcbdbecb000 r--p 00002000 fc:00 28839889                   /lib/x86_64-linux-gnu/libdl-2.19.so
+7fcbdbecb000-7fcbdbecc000 rw-p 00003000 fc:00 28839889                   /lib/x86_64-linux-gnu/libdl-2.19.so
+7fcbdbecc000-7fcbdbee5000 r-xp 00000000 fc:00 28839890                   /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fcbdbee5000-7fcbdc0e4000 ---p 00019000 fc:00 28839890                   /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fcbdc0e4000-7fcbdc0e5000 r--p 00018000 fc:00 28839890                   /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fcbdc0e5000-7fcbdc0e6000 rw-p 00019000 fc:00 28839890                   /lib/x86_64-linux-gnu/libpthread-2.19.so
+7fcbdc0e6000-7fcbdc0ea000 rw-p 00000000 00:00 0 
+7fcbdc0ea000-7fcbdc10d000 r-xp 00000000 fc:00 28839902                   /lib/x86_64-linux-gnu/ld-2.19.so
+7fcbdc1b3000-7fcbdc2e7000 rw-p 00000000 00:00 0 
+7fcbdc2fd000-7fcbdc2fe000 rw-p 00000000 00:00 0 
+7fcbdc2fe000-7fcbdc2ff000 r-xp 00000000 00:00 0 
+7fcbdc2ff000-7fcbdc306000 r--s 00000000 fc:00 792740                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7fcbdc306000-7fcbdc307000 ---p 00000000 00:00 0 
+7fcbdc307000-7fcbdc30c000 rw-p 00000000 00:00 0                          [stack:4712]
+7fcbdc30c000-7fcbdc30d000 r--p 00022000 fc:00 28839902                   /lib/x86_64-linux-gnu/ld-2.19.so
+7fcbdc30d000-7fcbdc30e000 rw-p 00023000 fc:00 28839902                   /lib/x86_64-linux-gnu/ld-2.19.so
+7fcbdc30e000-7fcbdc30f000 rw-p 00000000 00:00 0 
+7fcbdc30f000-7fcbdc5d2000 r-xp 00000000 fc:00 6030053                    /home/bobby/.rbenv/versions/2.1.0/bin/ruby
+7fcbdc7d1000-7fcbdc7d6000 r--p 002c2000 fc:00 6030053                    /home/bobby/.rbenv/versions/2.1.0/bin/ruby
+7fcbdc7d6000-7fcbdc7d8000 rw-p 002c7000 fc:00 6030053                    /home/bobby/.rbenv/versions/2.1.0/bin/ruby
+7fcbdc7d8000-7fcbdc7fe000 rw-p 00000000 00:00 0 
+7fcbdcde0000-7fcbde083000 rw-p 00000000 00:00 0                          [heap]
+7fff5f12b000-7fff5f14d000 rw-p 00000000 00:00 0 
+7fff5f19c000-7fff5f19e000 r-xp 00000000 00:00 0                          [vdso]
+7fff5f19e000-7fff5f1a0000 r--p 00000000 00:00 0                          [vvar]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+
+[NOTE]
+You may have encountered a bug in the Ruby interpreter or extension libraries.
+Bug reports are welcome.
+For details: http://www.ruby-lang.org/bugreport.html
+
+Aborted (core dumped)
+
