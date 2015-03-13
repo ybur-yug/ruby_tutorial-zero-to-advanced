@@ -37,7 +37,29 @@ AM ERICANA
 Outside of a stray space, it appears we are in business.
 
 ## Doing It With Ruby
+Let's create an engine now that we have the application skeleton built.
 
+`editor models.rb`
+
+```RUBY
+class Ocr
+  def init
+    @engine = Tesseract::Engine.new {|engine|
+      engine.language = :lol # arbitrary
+      engine.page_segmentation_mode = 4 # has a default but 4 seems safe
+      engine.whitelist = [*'a'..'z', *'A'..'Z', *0..9].join # thanks ruby, made this easy
+    }
+  end
+  def get_text(im)
+    @engine.text_for(im)
+  end
+end
+```
+
+As you can see, we simple create a new tesseract engine instance, and give it an arbitrary language,
+segment the image, and whitelist some characters. We can blacklist as well, but that is not needed
+at the current moment. We also simply wrap the text_for method, but this is just so we can access
+it via our class rather than tesseract itself.
 
 # Upcoming
 
