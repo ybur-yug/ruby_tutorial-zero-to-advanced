@@ -61,6 +61,27 @@ segment the image, and whitelist some characters. We can blacklist as well, but 
 at the current moment. We also simply wrap the text_for method, but this is just so we can access
 it via our class rather than tesseract itself.
 
+## Aside: Forcing A Segfault In Tesseract (Or: Oh shit I broke something)
+So, I have NO clue what's broken here, but maybe one of you guys will figure it out and we can fork
+and PR a fix if possible. When trying out some samples of png's of from books I ran into this issue:
+
+```BASH
+
+[NOTE]
+You may have encountered a bug in the Ruby interpreter or extension libraries.
+Bug reports are welcome.
+For details: http://www.ruby-lang.org/bugreport.html
+
+Aborted (core dumped)
+```
+
+And atop it a giant stack trace. If you want to run the executable on it the image is 'prince.png' in
+the test directory of the project. The stack trace is in .stack_trace. A similar issue is [open on the repo](https://github.com/meh/ruby-tesseract-ocr/issues/37)
+
+Anywho, if someone figures that out I'd love to learn what broke.
+
+## Back to Building Shit That Works 
+
 # Upcoming
 
 ## Using the CLI via Ruby
