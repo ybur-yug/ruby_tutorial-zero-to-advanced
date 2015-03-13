@@ -75,8 +75,8 @@ For details: http://www.ruby-lang.org/bugreport.html
 Aborted (core dumped)
 ```
 
-And atop it a giant stack trace. If you want to run the executable on it the image is 'prince.png' in
-the test directory of the project. The stack trace is in .stack_trace. A similar issue is [open on the repo](https://github.com/meh/ruby-tesseract-ocr/issues/37)
+And atop it a giant stack trace. If you want to run the executable on it the image is `prince.png` in
+the test directory of the project. The stack trace is in `.stack_trace`. A similar issue is [open on the repo](https://github.com/meh/ruby-tesseract-ocr/issues/37)
 
 Anywho, if someone figures that out I'd love to learn what broke.
 
