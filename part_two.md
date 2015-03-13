@@ -63,3 +63,9 @@ And we can bundle up and start building this out
 #### If this is of concern, check back and see if there are release tags later. When this is
 #### completed I plan on having a commit linked to with a release for each major step to ensure
 #### no one can get stuck.
+
+# Upcoming
+
+## Using the CLI via Ruby
+## Optimizing Parsing By Row
+## Utilizing Confidence
