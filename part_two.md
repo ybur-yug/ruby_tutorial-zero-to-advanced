@@ -1,10 +1,8 @@
 ## Building A Skeleton
 There is a wonderful boierlplate Sintra repository by [karlcoelho](https://github.com/karlcoelho/sinatra-boilerplate) we are going to utilize
-for a quick start.
+for a quick start. It is provided in the repository under the `app` directory.
 
 ```BASH
-git clone https://github.com/karlcoelho/sinatra-boilerplate
-mv sinatra-boilerplate app
 cd app
 bundle
 ls
@@ -76,14 +74,8 @@ Aborted (core dumped)
 ```
 
 And atop it a giant stack trace. If you want to run the executable on it the image is `prince.png` in
-the test directory of the project. The stack trace is in `.stack_trace`. A similar issue is [open on the repo](https://github.com/meh/ruby-tesseract-ocr/issues/37)
+the test directory of the project. The stack trace is in [.stack_trace](/.stack_trace). A similar issue is [open on the repo](https://github.com/meh/ruby-tesseract-ocr/issues/37)
 
 Anywho, if someone figures that out I'd love to learn what broke.
 
-## Back to Building Shit That Works 
-
-# Upcoming
-
-## Using the CLI via Ruby
-## Optimizing Parsing By Row
-## Utilizing Confidence
+#### [Part 3](/part_three.md)
