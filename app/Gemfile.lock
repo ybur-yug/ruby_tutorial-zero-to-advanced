@@ -7,6 +7,8 @@ GEM
       timers (~> 4.0.0)
     coderay (1.1.0)
     diff-lcs (1.2.5)
+    domain_name (0.5.23)
+      unf (>= 0.0.5, < 1.0.0)
     ffi (1.9.7)
     ffi-extra (0.1.0)
       ffi
@@ -32,17 +34,35 @@ GEM
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
     hitimes (1.2.2)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     iso-639 (0.2.5)
     listen (2.9.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     lumberjack (1.0.9)
+    mechanize (2.7.3)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (~> 2.0)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     method_source (0.8.2)
+    mime-types (2.4.3)
+    mini_portile (0.6.2)
     nenv (0.2.0)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    ntlm-http (0.1.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -74,6 +94,10 @@ GEM
     thor (0.19.1)
     timers (4.0.1)
       hitimes
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
+    webrobots (0.1.1)
 
 PLATFORMS
   ruby
@@ -82,5 +106,6 @@ DEPENDENCIES
   guard
   guard-bundler
   guard-rspec
+  mechanize
   rspec
   tesseract-ocr
