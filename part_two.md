@@ -5,8 +5,9 @@ and inside of it we will write our first failing test.
 ```BASH
 mkdir you_app
 cd your_app
-touch ocr_engine.rb
+mkdir
 mkdir spec
+touch lib/ocr_engine.rb
 editor spec/integration_spec.rb
 ```
 
@@ -14,7 +15,7 @@ Now, we will be creating an engine class that we will use to interact with our i
 write a very elementary spec for that.
 
 ```RUBY
-require './ocr_engine.rb'
+require './lib/ocr_engine.rb'
 
 describe OcrEngine do
   let(:engine) { OcrEngine.new }
@@ -38,7 +39,7 @@ and we get the output:
 
 So, lets fix that by creating our actual engine class.
 
-`editor ocr_engine.rb`
+`editor lib/ocr_engine.rb`
 
 ```RUBY
 class OcrEngine
