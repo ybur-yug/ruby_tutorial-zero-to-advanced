@@ -1,4 +1,5 @@
 # OCR and Ruby - A Love Story
+# NOTE: This is a WIP
 
 ## Introduction
 Hi, I'm Bobby. I recently wrote an [OCR Tutorial](http://www.github.com/rhgraysonii/ocr_tutorial) that was implemented using Python and Flask.
