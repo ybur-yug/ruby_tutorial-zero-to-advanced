@@ -124,8 +124,6 @@ It appears as if we officially can start getting our hands dirty.
 
 #### [commit_link](link)
 
-#### [Part 4](part_four.md)
-
 ## An Aside: Forcing A Segfault In Tesseract (Or: Oh shit I broke something)
 So, I have NO clue what is broken here, but maybe one of you guys will figure it out and we can fork
 and PR a fix if possible. When trying out some samples of images of from books I ran into this issue:
