@@ -161,5 +161,14 @@ Now, inside our spec itself
 ```
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 ```
-[commit link](link)
 
+can replace our current `require` statements.
+
+And now if we make any changes to our spec whatsoever, Guard is properly configured to keep them running
+for us. So in our dedicated terminal we initialized guard's files in we will run
+
+`bundle exec guard`
+
+and now, we have auto-tests!
+
+[commit link](link)
