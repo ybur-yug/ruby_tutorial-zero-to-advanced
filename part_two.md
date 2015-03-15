@@ -41,8 +41,6 @@ So, lets fix that by creating our actual engine class.
 
 ```RUBY
 class OcrEngine
-  def initialize
-  end
 end
 ```
 
