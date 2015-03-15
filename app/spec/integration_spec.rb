@@ -23,13 +23,22 @@ describe OcrEngine::BaseEngine do
           expect(result).to be_an_instance_of String
         end
       end
-
-      it "can get text by line" do
-        File.open('rb.png') do |file|
-          OcrEngine::BaseEngine.new.confidence_and_text(file.read)
-        end
-      end
     end
   end
 end
 
+describe OcrEngine::Scraper do
+  let(:scraper) { OcrEngine::Scraper.new }
+  
+  context "on creation" do
+    it "instantiates a browser" do
+      expect(scraper.browser.class).to eq Mechanize
+    end
+  end
+  
+  context "in user" do
+    it "gets all png meme links from the meme subreddit" do # TODO stub this
+      expect(scraper.meme_links('http://www.reddit.com/r/memes').sample.include? 'png').to eq true
+    end
+  end
+end
