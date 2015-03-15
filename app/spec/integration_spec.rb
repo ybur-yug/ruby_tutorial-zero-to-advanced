@@ -11,7 +11,7 @@ describe OcrEngine do
     end
     
     it "creates an engine upon instantiation" do
-      expect(engine.ocr_engine).to be_an_instance_of Tesseract::Engine
+      expect(tess_engine).to be_an_instance_of Tesseract::Engine
     end
   end
 
