@@ -38,7 +38,7 @@ class PrintNStrs {
 And now, let use do it in Ruby...
 
 ```RUBY
-puts [['a'..'z'], ['aa'..'zz'], ['aaa'..'zzz']]
+puts [['a'..'z'], ['aa'..'zz'], ['aaa'..'zzz']].compact!
 ```
 
 As you can see, the Java programmer had a much longer day.
