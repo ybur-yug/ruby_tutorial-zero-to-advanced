@@ -41,4 +41,13 @@ Setting up a basic route
 
 Testing Modular Web Services
 
+SQL DBs
+
+Data Mapper
+
+#### Baking in Rails
+Restructuring to be a Rails Application
+
+Heroku Deployment
+
 #### [Part 1](/part_one.md)
