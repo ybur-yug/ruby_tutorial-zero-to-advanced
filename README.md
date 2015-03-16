@@ -1,9 +1,30 @@
-# OCR and Ruby - A Love Story
+# Ruby - A Curated Tour
 # NOTE: This is a WIP
+## For who?
+Anyone. Depending on how familiar you are with Ruby, web development, database systems, and testing there
+are great points to jump in for just about anyone. We begin assuming someone does not even know Ruby.
+So, with that, here is a table of contents:
 
-## Introduction
-Hi, I'm Bobby. I recently wrote an [OCR Tutorial](http://www.github.com/rhgraysonii/ocr_tutorial) that was implemented using Python and Flask.
-This was fun and dandy, but it was a very primitive implementation. In this short book, we're going
-to dive into to a much more robust wrapper of tesseract-ocr, built by the prolific [Meh](http://www.github.com/meh).
+#### Introduction
+Why Ruby?
+Basic Syntax
+Rspec
+Functions
+Looping
+Objects
+Style
+
+#### Tesseract
+Gems, Dependencies and Their Installation
+Reading an Image
+I/O and Ruby
+Testing I/O and Ruby
+Customizing Tesseract
+
+#### Introducing A Webserver
+Web protocol basics
+Sinatra
+Setting up a basic route
+Testing Modular Web Services
 
 #### [Part 1](/part_one.md)
