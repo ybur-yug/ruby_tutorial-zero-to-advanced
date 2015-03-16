@@ -3,7 +3,7 @@ This will be a very by-the-book Ruby tutorial. We will start by simply creating 
 and inside of it we will write our first failing test.
 
 ```BASH
-mkdir you_app
+mkdir your_app
 cd your_app
 mkdir
 mkdir spec
