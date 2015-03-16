@@ -5,14 +5,14 @@ Anyone. Depending on how familiar you are with Ruby, web development, database s
 are great points to jump in for just about anyone. We begin assuming someone does not even know Ruby.
 So, with that, here is a table of contents:
 
-#### Introduction
-Why Ruby?
+### Introduction
+#### [Why Ruby?](/introduction/why_ruby.md)
 
-Basic Syntax
-
-Rspec
+#### [Basic Syntax](/introduction/basic_syntax.md)
 
 Functions
+
+Rspec
 
 Looping
 
