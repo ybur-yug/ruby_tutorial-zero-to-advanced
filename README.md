@@ -25,18 +25,22 @@ You, me, Dupree, and the universe, baby.
 
 #### [Basic Syntax](/introduction/basic_syntax.md)
 
-Functions
+#### [Strings and Numbers](/introduction/strings_and_numbers.md)
 
-Rspec
+#### [Starting With Methods](/introduction/starting_with_methods.md)
 
-Looping
+#### [Arrays and Ranges](/introduction/arrays_and_ranges.md)
 
-Objects
+#### [More Methods](/introduction/more_methods.md)
 
-Style
+#### [Receivers and Returners](/introduction/receive_vs_return.md)
+
+#### [Variables](/introduction/variables.md)
+
+#### [Beginning With Testing](/introduction/testing.md)
 
 
-#### Tesseract
+### Tesseract
 Gems, Dependencies and Their Installation
 
 Reading an Image
@@ -60,9 +64,9 @@ SQL DBs
 
 Data Mapper
 
-#### Baking in Rails
+### Baking in Rails
 Restructuring to be a Rails Application
 
 Heroku Deployment
 
-#### [Part 1](/part_one.md)
+### [Part 1 - original ocr tut](/introduction/part_one.md)
