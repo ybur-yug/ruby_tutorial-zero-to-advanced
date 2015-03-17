@@ -20,7 +20,7 @@ twice already.
 ## For who?
 You, me, Dupree, and the universe, baby.
 
-### Introduction
+### [Introduction](/introduction/intro.md)
 #### [Why Ruby?](/introduction/why_ruby.md)
 
 #### [Basic Syntax](/introduction/basic_syntax.md)
