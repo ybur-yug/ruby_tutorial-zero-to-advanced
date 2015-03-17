@@ -43,7 +43,7 @@ You, me, Dupree, and the universe, baby.
 ### Tesseract
 Gems, Dependencies and Their Installation
 
-Reading an Image
+#### [Beginning] (/tesseract/part_one.md)
 
 I/O and Ruby
 
