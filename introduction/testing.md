@@ -121,4 +121,4 @@ Boom! Passing tests. See, the glory of this is if we have good test coverage, we
 and know immediately if we have broken anything. We will be writing tests for all the work we do from
 here onwards.
 
-#### [Going Deeper](/tesseract/part_one.md)
+#### [Going Deeper](/introduction/bot.md)
