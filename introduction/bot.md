@@ -116,4 +116,48 @@ end
 By defining the constant `AMAZON_URL` and also getting the page, we now have successfully reached
 Amazon. Time to find the search form.
 
+## Automating Testing
+`Guard` is a systems tool and Gem that will allow us to trivially run our specs whenever they change. In order to use guard,
+we first make some gemfile changes:
+
+```RUBY
+source "https://rubygems.org"
+
+gem "mechanize"
+# gem "tesseract-ocr" for later ;)
+
+group :test, :development do
+  gem "rspec"
+  gem "guard"
+  gem "guard-rspec"
+  gem "guard-bundler"
+end
+
+```
+
+This sets us up with guard, and the related plugins that will allow us to run it easily. Now that we are getting robust with
+our testing, we are going to make what is commonly known as a `spec_helper` as well.
+
+`editor spec/spec_helper.rb`
+
+```RUBY
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require 'scraper'
+```
+Now, we will be loading by default all our modules in here so our specs can just `'require spec_helper'` and we will be good
+to go. So let's make that change at the top
+
+`editor spec/scraper_spec.rb`
+
+```
+require 'spec_helper'
+...
+```
+
+and now we can run
+
+`bundle exec guard init`
+
+And any time we change one of our tests, it will automatically run. Try it out!
 #### [Interacting With the Web Using Our Bot](/introduction/bot_two.md)
