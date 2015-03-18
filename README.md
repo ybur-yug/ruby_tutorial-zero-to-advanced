@@ -24,6 +24,8 @@ You, me, Dupree, and the universe, baby.
 
 ### [Building A Simple Bot](/introduction/bot.md)
 
+### [Hooking In A Webserver - Sinatra](/introduction/sinatra.md)
+
 ### [OCR and Tesseract - Taking our webserver further](/tesseract/tess_1.md)
 
 ### [Customizing OCR and Tesseract](/tesseract/tess_advanced.md.md)
