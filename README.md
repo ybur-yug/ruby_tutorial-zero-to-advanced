@@ -1,5 +1,5 @@
 # Ruby - A Curated Tour
-# NOTE: This is a WIP
+#### NOTE: This is a WIP
 
 ## Intentions
 I believe that anyone, anywhere, at any time should be able to learn how to program. I believe this because
