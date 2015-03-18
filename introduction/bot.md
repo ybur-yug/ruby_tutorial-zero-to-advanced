@@ -41,7 +41,7 @@ With these changes, we should get a new failure when we run all of these.
 `rspec spec/scraper_spec.rb`
 
 ```
-bby@devbox:~/ruby_tutorial-ocr/some_dir$ rspec spec/scraper_spec.rb 
+bobby@devbox:~/ruby_tutorial-ocr/some_dir$ rspec spec/scraper_spec.rb 
 /home/bobby/ruby_tutorial-ocr/some_dir/spec/scraper_spec.rb:3:in 
 <top (required)>: uninitialized constant Scraper::Brwoser (NameError)
 
@@ -51,7 +51,7 @@ A new failure. So now we can modify the old class to make it passing!
 
 `editor lib/scraper.rb`
 
-```
+```RUBY
 require 'mechanize'
 
 module Scraper 
