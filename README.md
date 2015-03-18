@@ -1,5 +1,5 @@
 # Ruby - A Curated Tour
-# NOTE: This is a WIP
+#### NOTE: This is a WIP
 
 ## Intentions
 I believe that anyone, anywhere, at any time should be able to learn how to program. I believe this because
@@ -20,35 +20,14 @@ twice already.
 ## For who?
 You, me, Dupree, and the universe, baby.
 
-### [Introduction](/introduction/intro.md)
+### [Learn Ruby](/introduction/intro.md)
 
-### Tesseract
-Gems, Dependencies and Their Installation
+### [Building A Simple Bot](/introduction/bot.md)
 
-#### [Beginning] (/tesseract/part_one.md)
+### [OCR and Tesseract - Taking our webserver further](/tesseract/tess_1.md)
 
-I/O and Ruby
+### [Customizing OCR and Tesseract](/tesseract/tess_advanced.md.md)
 
-Testing I/O and Ruby
+### [Baking in Rails](/rails/rails_1.md)
 
-Customizing Tesseract
-
-#### Introducing A Webserver
-Web protocol basics
-
-Sinatra
-
-Setting up a basic route
-
-Testing Modular Web Services
-
-SQL DBs
-
-Data Mapper
-
-### Baking in Rails
-Restructuring to be a Rails Application
-
-Heroku Deployment
-
-### [Part 1 - original ocr tut](/introduction/part_one.md)
+### [Deployment](/deploy/deployment.md)
