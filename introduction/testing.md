@@ -21,9 +21,9 @@ editor spec/my_first_spec.rb
 Now, we can write a simple test. We will start at a very basic level.
 
 ```RUBY
-let(:bob) { Bob.new }
-
 describe Bob do
+  let(:bob) { Bob.new }
+  
   it "can tell you hes wearing pants" do
     expect(bob.pants?).to eq true
   end
@@ -32,7 +32,7 @@ end
 
 and now, we can save and run our spec
 
-`bundle exec rspec spec/my_first_spec.rb`
+`rspec spec/my_first_spec.rb`
 
 but we do not quite get a failure yet:
 
@@ -61,6 +61,7 @@ and fix it by creating a class `Bob`
 
 ```RUBY
 class Bob
+
 end
 
 ```
@@ -120,5 +121,7 @@ Finished in 0.02111 seconds (files took 0.11633 seconds to load)
 Boom! Passing tests. See, the glory of this is if we have good test coverage, we can change many parts
 and know immediately if we have broken anything. We will be writing tests for all the work we do from
 here onwards.
+
+#### [Shelr Screencast With Audio](/shelr/1426787266/)
 
 #### [Going Deeper](/introduction/bot.md)

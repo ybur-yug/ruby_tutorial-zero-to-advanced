@@ -20,6 +20,11 @@ twice already.
 ## For who?
 You, me, Dupree, and the universe, baby.
 
+#### Note that for every chapter, there is an accompanying [shelr](link) cast that will be linked to. This shows you
+the entirety of my terminal usage in the project, which for beginners can be very helpful.
+
+[Playback Instructions](/shelr/README.md)
+
 ### [Learn Ruby](/introduction/intro.md)
 
 ### [Building A Simple Bot](/introduction/bot.md)
