@@ -23,6 +23,8 @@ You, me, Dupree, and the universe, baby.
 
 [Playback Instructions](/shelr/README.md)
 
+#### I am adding annotations via [Genius](http://www.genius.com/)
+
 ### [Learn Ruby](/introduction/intro.md)
 
 ### [Building A Simple Bot](/introduction/bot.md)
