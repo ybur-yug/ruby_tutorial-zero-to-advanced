@@ -44,6 +44,7 @@ module scraper
     attr_accessor :frontpage
     def initialize
       @frontpage = Browser.new.reddit_frontpage
+    end
   end
   ...
 end
