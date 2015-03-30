@@ -39,7 +39,7 @@ have this as a base, rather than doing it all with the browser. So let's build a
 
 
 ```RUBY
-module scraper
+module Scraper
   Class RedditAPI
     attr_accessor :frontpage
     def initialize
