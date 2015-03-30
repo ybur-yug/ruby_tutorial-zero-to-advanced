@@ -40,7 +40,7 @@ have this as a base, rather than doing it all with the browser. So let's build a
 
 ```RUBY
 module Scraper
-  Class RedditAPI
+  class RedditAPI
     attr_accessor :frontpage
     def initialize
       @frontpage = Browser.new.reddit_frontpage
