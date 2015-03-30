@@ -1,35 +1,33 @@
 require 'mechanize'
 require 'pry'
 
-$AMAZON_URL = 'http://www.amazon.com/'
+$REDDIT_URL = 'http://www.reddit.com/'
 
 module Scraper 
+
+  class RedditAPI
+    attr_accessor :frontpage
+
+    def initialize
+      @frontpage = Browser.new.reddit_frontpage
+    end
+  end
+
   class Browser 
+    attr_accessor :reddit
+    attr_accessor :browser
+
     def initialize
       @browser = Mechanize.new { |x| x.user_agent_alias = "Mac Safari" }
-      @amazon = browser.get($AMAZON_URL)
+      @reddit = browser.get($REDDIT_URL)
     end
 
-    def browser
-      @browser
+    def reddit_login_form()
+      @reddit.forms.last
     end
 
-    def amazon
-      @amazon
-    end
-
-    def amazon_search_form()
-      @amazon.form_with(class: "nav-searchbar")
-    end
-
-    def amazon_search(keywords)
-      form = amazon_search_form
-      amazon_search_form do |form|
-        search_field = form["field-keywords"]
-        binding.pry
-        search_field = keywords
-      end
-      @browser.submit(form)
+    def reddit_frontpage
+      @reddit.links.map {|l| l if l.dom_class == "title may-blank " }.compact!
     end
   end
 end
