@@ -80,8 +80,8 @@ Time for another test:
 
 ~~~RUBY
 ...
-    it "can get amazon's main page" do
-      expect(browser.amazon.uri.to_s).to eq 'http://www.amazon.com/'
+    it "can get reddit's main page" do
+      expect(browser.amazon.uri.to_s).to eq 'http://www.reddit.com/'
     end
 ...
 ~~~
@@ -93,7 +93,7 @@ Now, we know this will fail, but we pop into our module:
 ~~~RUBY
 require 'mechanize'
 
-$AMAZON_URL = 'http://www.amazon.com/'
+$REDDIT_URL = 'http://www.reddit.com/'
 
 module Scraper 
   class Browser 
@@ -105,16 +105,16 @@ module Scraper
       @browser
     end
 
-    def amazon
-      @browser.get($AMAZON_URL)
+    def reddit 
+      @browser.get($REDDIT_URL)
     end
   end
 end
 
 ~~~
 
-By defining the constant `AMAZON_URL` and also getting the page, we now have successfully reached
-Amazon. Time to find the search form.
+By defining the constant `REDDIT_URL` and also getting the page, we now have successfully reached
+something. Time to find the signin form. But first, we should implement a more robust dev env.
 
 ## Automating Testing
 `Guard` is a systems tool and Gem that will allow us to trivially run our specs whenever they change. In order to use guard,
@@ -145,6 +145,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'scraper'
 ~~~
+
 Now, we will be loading by default all our modules in here so our specs can just `'require spec_helper'` and we will be good
 to go. So let's make that change at the top
 
@@ -160,4 +161,5 @@ and now we can run
 `bundle exec guard init`
 
 And any time we change one of our tests, it will automatically run. Try it out!
+
 #### [Interacting With the Web Using Our Bot](/introduction/bot_two.md)
