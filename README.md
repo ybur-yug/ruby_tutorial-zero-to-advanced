@@ -22,7 +22,7 @@ and maybe even running some tests, we will be able to move onto the wonderful pa
 
 From there, we take that bot, and wrap it as a very simple API class over reddit.com.
 
-### [Building A Simple Bot](/introduction/bot.md)
+### [Wrapping A Web Service As an API](/introduction/bot_2.md)
 
 Next, we turn it into a full blown RESTful API and expand functionality backed with a database.
 
