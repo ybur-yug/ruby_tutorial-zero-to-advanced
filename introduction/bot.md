@@ -56,12 +56,9 @@ require 'mechanize'
 
 module Scraper 
   class Browser 
+    attr_accessor :browser
     def initialize
       @browser = Mechanize.new { |x| x.user_agent_alias = "Mac Safari" }
-    end
-
-    def browser
-      @browser
     end
   end
 end
@@ -97,16 +94,11 @@ $REDDIT_URL = 'http://www.reddit.com/'
 
 module Scraper 
   class Browser 
+    attr_accessor :browser
+    attr_accessor :reddit
     def initialize
       @browser = Mechanize.new { |x| x.user_agent_alias = "Mac Safari" }
-    end
-
-    def browser
-      @browser
-    end
-
-    def reddit 
-      @browser.get($REDDIT_URL)
+      @reddit = @browser.get($REDDIT_URL)
     end
   end
 end
