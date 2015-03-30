@@ -81,7 +81,7 @@ Time for another test:
 ~~~RUBY
 ...
     it "can get reddit's main page" do
-      expect(browser.amazon.uri.to_s).to eq 'http://www.reddit.com/'
+      expect(browser.reddit.uri.to_s).to eq 'http://www.reddit.com/'
     end
 ...
 ~~~
