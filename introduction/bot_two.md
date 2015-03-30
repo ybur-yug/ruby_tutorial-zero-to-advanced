@@ -38,7 +38,7 @@ Now that we have the reddit frontpage, it would be nice to have a sort of API we
 have this as a base, rather than doing it all with the browser. So let's build another class inside our module quickly.
 
 
-```
+```RUBY
 module scraper
   Class RedditAPI
     attr_accessor :frontpage
