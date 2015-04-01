@@ -1,18 +1,8 @@
 require 'mechanize'
-require 'pry'
+require 'sinatra'
 
 $REDDIT_URL = 'http://www.reddit.com/'
-
 module Scraper 
-
-  class RedditAPI
-    attr_accessor :frontpage
-
-    def initialize
-      @frontpage = Browser.new.reddit_frontpage
-    end
-  end
-
   class Browser 
     attr_accessor :reddit
     attr_accessor :browser
@@ -30,5 +20,19 @@ module Scraper
       @reddit.links.map {|l| l if l.dom_class == "title may-blank " }.compact!
     end
   end
+
+  class RedditAPI
+    attr_accessor :frontpage
+
+    def initialize
+      @frontpage = Browser.new.reddit_frontpage
+    end
+  end
 end
+
+get '/' do
+  reddit = Scraper::RedditAPI.new
+  reddit.frontpage.map { |l| "<a href='#{l.uri.to_s}'>#{l.text}</a><br>" }
+end
+
 
