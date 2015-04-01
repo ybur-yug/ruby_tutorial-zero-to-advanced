@@ -2,39 +2,44 @@
 #### NOTE: This is a WIP
 
 ## Intentions
-I believe that anyone, anywhere, at any time should be able to learn how to program. I believe this because
-I find it so fundamentally fulfilling that I base most of my life's non-sleeping activity on it. With this,
-I dream of a resource that can effectively help someone slingshot their skills from x to y at any point in 
-their experience, be it the day they learn how to code or ten years in and researching cutting-edge topics.
+I am building this with one simple purpose:
 
-This book is an attempt to assemble such a resource. It will shamelessly link to other resources by others
-in the community, for having a sole source of information is a fool's errand. If there is a better resource
-I will link to it. if you know of it and I do not, send me a Pull Request. Even simple one liners are **MORE**
-than welcomed.
-
-It is currently in an infant state. It will be fluid, and much will change. I would not use this (yet). It
-was birthed as a Ruby port of a Python OCR tutorial I did and I have since let it evolve. I believe at writing
-the repository sits at close to 100 commits of code and writing already, and has been restructured massively
-twice already.
-
-## For who?
-You, me, Dupree, and the universe, baby.
-
-
-[Playback Instructions](/shelr/README.md)
-
+#### Yet another resource to learn Ruby & Webdev
 #### I am adding annotations via [Genius](http://www.genius.com/)
+
+Why? Because its fun, and well, why not? 
+
+The structure of this guide is simple. It begins assuming you know no Ruby. I will shamelessly proceed to link to other
+resources that are quite reputable for the majority of the beginning tasks. 
 
 ### [Learn Ruby](/introduction/intro.md)
 
+
+However, once you've a grasp on syntax, gems,
+and maybe even running some tests, we will be able to move onto the wonderful part 1 of actual coding in this tutoral.
+
 ### [Building A Simple Bot](/introduction/bot.md)
+
+From there, we take that bot, and wrap it as a very simple API class over reddit.com.
+
+### [Wrapping A Web Service As an API](/introduction/bot_2.md)
+
+Next, we turn it into a full blown RESTful API and expand functionality backed with a database.
 
 ### [Hooking In A Webserver - Sinatra](/introduction/sinatra.md)
 
+And then we proceed to take this API, get a bunch of dank memes, and read the text from them.
+
 ### [OCR and Tesseract - Taking our webserver further](/tesseract/tess_1.md)
+
+We drop in this OCR so we can read out dank memes.
 
 ### [Customizing OCR and Tesseract](/tesseract/tess_advanced.md.md)
 
+And last but not least we bake in Ruby on Rails.
+
 ### [Baking in Rails](/rails/rails_1.md)
+
+And there is a bonus chapter on deployment.
 
 ### [Deployment](/deploy/deployment.md)
