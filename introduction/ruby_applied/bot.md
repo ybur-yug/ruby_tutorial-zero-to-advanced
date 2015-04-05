@@ -219,4 +219,4 @@ and now we can run
 
 And any time we change one of our tests, it will automatically run. Try it out!
 
-#### [Interacting With the Web Using Our Bot](/introduction/bot_two.md)
+#### [Interacting With the Web Using Our Bot](/introduction/ruby_applied/bot_two.md)
