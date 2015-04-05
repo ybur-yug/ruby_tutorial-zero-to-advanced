@@ -6,8 +6,8 @@ application. In order to do this were going to do a few things. First, we should
 `git`. We will also use `bundler` to make this a `gem` for the sake of modularity
 
 ~~~BASH
-$ bundle baller_gem # you can pick whatever name you want. I will keep using baller_gem
-$ cd baller_gem
+$ bundle baller_gem # you can pick whatever name you want. I will keep using reddit_wrap
+$ cd reddit_wrap
 $ git init
 $ git add .
 $ git commit -m 'initial commit'
