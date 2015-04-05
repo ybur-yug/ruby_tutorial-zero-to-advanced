@@ -11,7 +11,7 @@ class App < Sinatra::Base
   end   
 
   post "/frontpage" do
-    "{'penis': 'wut' }"
+    "test"
   end
 end
 
