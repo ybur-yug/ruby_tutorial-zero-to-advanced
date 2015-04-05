@@ -71,7 +71,10 @@ in depth [here](https://robots.thoughtbot.com/content-compression-with-rack-defl
 We also will need to setup our server. I like to use `Unicorn` for simple applications like this. To set this up we will add two
 additional files.
 
-`$ editor unicorn.rb`
+```BASH
+$ bundle inject unicorn # cool way to add a gem to gemfile w/o opening it
+$ editor unicorn.rb
+```
 
 ```RUBY
 worker_processes 4
@@ -89,4 +92,43 @@ web: bundle exec unicorn -p $PORT -c ./unicorn.rb
 
 Here we can simply see that we are running the server on a specified port.
 
-Now, we need to make our app itself a little more robust, rather than a few simple lines
+Now, we need to make our app itself a little more robust, rather than a few simple lines.
+
+```RUBY
+require "sinatra/base" # only get the parts we need
+
+class App < Sinatra::Base # make the app a class
+  base = File.dirname(__FILE__) # set base dir
+  set :root, base
+
+  # Function allows both get / post.
+  def self.get_or_post(path, opts={}, &block)
+    get(path, opts, &block) # pass path, params, and a block
+    post(path, opts, &block)
+  end   
+
+  post "/frontpage" do
+    "test"
+  end
+end
+
+```
+
+The comments explain each step. Here we are simply setting up a means to get both POST and GET requests and handle them appropriately
+on the server. If you have `foreman` installed we can now run the application starting it up with that. If you do not,
+
+`$ gem install foreman`
+
+and then
+
+`$ foreman start`
+
+And if we open up another terminal and run:
+
+`$ curl -X POST 127.0.0.1:5000/frontpage -d "{'test':'true'}"`
+
+we get back
+
+`test`
+
+Just as expected! Now it's time to plug in our gem.
