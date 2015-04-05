@@ -1,8 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    call-me (0.0.2.3)
-      refining
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
@@ -10,10 +8,6 @@ GEM
     domain_name (0.5.23)
       unf (>= 0.0.5, < 1.0.0)
     ffi (1.9.7)
-    ffi-extra (0.1.0)
-      ffi
-    ffi-inline (0.0.4.3)
-      ffi (>= 0.4.0)
     formatador (0.2.5)
     guard (2.12.5)
       formatador (>= 0.2.4)
@@ -36,7 +30,6 @@ GEM
     hitimes (1.2.2)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
-    iso-639 (0.2.5)
     listen (2.9.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -70,7 +63,6 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    refining (0.0.5.5)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -86,11 +78,6 @@ GEM
     rspec-support (3.2.2)
     shellany (0.0.1)
     slop (3.6.0)
-    tesseract-ocr (0.1.7)
-      call-me
-      ffi-extra
-      ffi-inline
-      iso-639
     thor (0.19.1)
     timers (4.0.1)
       hitimes
@@ -108,4 +95,3 @@ DEPENDENCIES
   guard-rspec
   mechanize
   rspec
-  tesseract-ocr
