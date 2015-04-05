@@ -12,8 +12,8 @@ require 'mechanize'
 
 $REDDIT_URL = 'http://www.reddit.com/'
 
-module Scraper 
-  class Browser 
+module RedditWrap 
+  class Engine 
     attr_accessor :browser
     attr_accessor :reddit
     def initialize
@@ -39,11 +39,11 @@ have this as a base, rather than doing it all with the browser. So let's build a
 
 
 ```RUBY
-module Scraper
-  class RedditAPI
+module RedditWrap
+  class Api
     attr_accessor :frontpage
     def initialize
-      @frontpage = Browser.new.reddit_frontpage
+      @frontpage = Engine.new.reddit_frontpage
     end
   end
   ...
