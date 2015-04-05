@@ -52,4 +52,4 @@ end
 
 Well, that we easy. Now to get the front page all we need to do is create an instantiation of `RedditAPI` and call `.frontpage` and we get a list of links. Awesome! Next, we are going to hook this up to the web, RESTful style.
 
-#### [Getting Started With Sinatra](../webserver/introduction.md)
+#### [Getting Started With Sinatra](/webserver/introduction.md)
