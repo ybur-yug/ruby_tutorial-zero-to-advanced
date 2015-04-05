@@ -87,7 +87,7 @@ Now we will need a `Procfile` to run it all.
 `$ editor Procfile`
 
 ```
-web: bundle exec unicorn -p $PORT -c ./unicorn.rb
+web: bundle exec unicorn -p 5000 -c ./unicorn.rb
 ```
 
 Here we can simply see that we are running the server on a specified port.
